@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "#' Medianize\n#'\n#' Categorizes a continous array in three groups (low-mid-high) using median as criteria. \\cr\n#'    The boundary values are included to lowest group\n#'\n#' @param  variable Array Values list\n#' @param  withLabels Boolean Check if returns range fields/low-mid-high names\n#'\n#' @return c Grouped values\n#'\n#' @export\n#'\n#' @example tertilize(c(1,2,3,4)); tertilize(c(1,2,3,4, withLabels  = TRUE));\n#'\n#'\ntertilize <- function(variable, withLabels = FALSE){\n  values = cut(variable,\n      breaks = stats::quantile(variable, c(0, 1/3, 2/3, 1), na.rm=TRUE),\n      include.lowest = TRUE)\n\n  if(withLabels){\n    levels(values) = c('LOW', 'MID', 'HIGH')\n  }\n  return(values)\n}\n",
+    "created" : 1541668533071.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2791391242",
+    "id" : "E3C286CA",
+    "lastKnownWriteTime" : 1541670785,
+    "last_content_update" : 1541670785548,
+    "path" : "C:/Users/lpalomero/Documents/GitHub/groupR/R/tertilize.R",
+    "project_path" : "R/tertilize.R",
+    "properties" : {
+        "source_window_id" : "wu5kfjwl2akxf",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

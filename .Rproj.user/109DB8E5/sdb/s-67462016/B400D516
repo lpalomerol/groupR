@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "context(\"Medianize.R\")\n\ntest_that('Should split two items in low-high using median as criteria', {\n  #Arrange\n  input = c(1,5)\n  #Act\n  output = medianize(input)\n  #Assert\n  expect_equal(as.character(output), c('LOW', 'HIGH'))\n})\n\n\ntest_that('Should split two items in low-high using median as criteria (order matters)', {\n  #Arrange\n  input = c(5,1)\n  #Act\n  output = medianize(input)\n  #Assert\n  expect_equal(\n    as.character(output),\n    c('HIGH', 'LOW'))\n})\n\n\ntest_that('Should ignore NA values', {\n  #Arrange\n  input = c(5,1, NA)\n  #Act\n  output = medianize(input)\n  #Assert\n  expect_equal(\n    as.character(output),\n    c('HIGH', 'LOW', NA))\n})\n\ntest_that('With odd number of values, the middle value factor is assigned to LOW group', {\n  #Arrange\n  input = c(1,2,3)\n  #Act\n  output = medianize(input)\n  #Assert\n  expect_equal(\n    as.character(output),\n    c('LOW', 'LOW','HIGH'))\n})\n\n\n",
+    "created" : 1541667729712.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3592139295",
+    "id" : "B400D516",
+    "lastKnownWriteTime" : 1541668386,
+    "last_content_update" : 1541668386408,
+    "path" : "C:/Users/lpalomero/Documents/GitHub/groupR/tests/testthat/test_medianize.R",
+    "project_path" : "tests/testthat/test_medianize.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

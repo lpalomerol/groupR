@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "Package: groupR\nType: Package\nTitle: Helping grouping methods\nVersion: 0.1.0\nAuthor: Luis Palomero\nMaintainer: Luis Palomero <lpalomerol@gmail.com>\nDescription: This package includes some functions related with grouping/ungrouping functions. \n  It was made because I am bored to rewrite the again and again.\nLicense: MIT + file LICENSE\nEncoding: UTF-8\nLazyData: true\nRoxygenNote: 6.1.0\nSuggests: \n    testthat\nImports: \n    stats\n",
+    "created" : 1541669088238.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1102796209",
+    "id" : "30AA3FA3",
+    "lastKnownWriteTime" : 1541670886,
+    "last_content_update" : 1541670886744,
+    "path" : "C:/Users/lpalomero/Documents/GitHub/groupR/DESCRIPTION",
+    "project_path" : "DESCRIPTION",
+    "properties" : {
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "dcf"
+}

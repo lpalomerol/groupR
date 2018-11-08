@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "#' Medianize\n#'\n#' Categorizes a continous array in two groups (low-high) using median as criteria. \\cr\n#'    With odd numbers, middle point is assigned to \"low\" group\n#'\n#' @param  val Array Values lista\n#'\n#' @return c Grouped values\n#'\n#' @export\n#'\n#' @example medianize(c(1,2,3,4))\n#'\n#'\nmedianize <- function(val){\n  medVal = stats::median(val, na.rm = TRUE)\n  return(\n    factor(\n        ifelse(val <= medVal, 'LOW', 'HIGH'),\n        levels = c('LOW', 'HIGH')\n      )\n  )\n}\n",
+    "created" : 1541667739666.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2762362306",
+    "id" : "EA2A81CC",
+    "lastKnownWriteTime" : 1541670792,
+    "last_content_update" : 1541670792190,
+    "path" : "C:/Users/lpalomero/Documents/GitHub/groupR/R/medianize.R",
+    "project_path" : "R/medianize.R",
+    "properties" : {
+        "source_window_id" : "wu5kfjwl2akxf"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

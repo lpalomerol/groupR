@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "context('Tertilize tests')\n\ntest_that('Should split values in factors', {\n  #Arrange\n  input = c(1,2,3)\n  #Act\n  output = tertilize(input)\n  #Assert\n  expect_equal(\n    as.numeric(output), c(1,2,3)\n  )\n\n  expect_equal(\n    as.character(output[1]), '[1,1.67]'\n  )\n})\n\ntest_that('Should split values in factors, ignoring nulls', {\n  #Arrange\n  input = c(1,2,3, NA)\n  #Act\n  output = tertilize(input)\n  #Assert\n  expect_equal(\n    as.numeric(output), c(1,2,3, NA)\n  )\n})\n\ntest_that('Should split values in factos with low-mid-high groups when required', {\n  input = c(1,2,3)\n  #Act\n  output = tertilize(input, withLabels = TRUE)\n  #Assert\n  expect_equal(\n    as.numeric(output), c(1,2,3)\n  )\n\n  expect_equal(\n    as.character(output), c('LOW', 'MID', 'HIGH')\n  )\n\n})\n\n\ntest_that('Should split values in factors, boundary values are assigned to low group', {\n  #Arrange\n  input = c(1,2,3, 4)\n  #Act\n  output = tertilize(input, withLabels = TRUE)\n  #Assert\n  expect_equal(\n    as.numeric(output), c(1,1,2,3)\n  )\n\n  expect_equal(\n    as.character(output), c('LOW', 'LOW', 'MID', 'HIGH')\n  )\n})\n",
+    "created" : 1541668617502.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4264325521",
+    "id" : "37FDD0E8",
+    "lastKnownWriteTime" : 1541669014,
+    "last_content_update" : 1541669014084,
+    "path" : "C:/Users/lpalomero/Documents/GitHub/groupR/tests/testthat/test_tertilize.R",
+    "project_path" : "tests/testthat/test_tertilize.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
